@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react'
+import { useCallback, useState } from "react";
 
 /**
  * @function useToggleHook
@@ -6,14 +6,17 @@ import React, { useState, useCallback } from 'react'
  * @returns {Array:Function} : [open, handleClickOpen, handleClose]
  */
 function useToggle(defaultState) {
-    const [open, setOpen] = useState(defaultState||false);
+  const [open, setOpen] = useState(defaultState || false);
 
-    const toggleFun = useCallback((e) => {
-        setOpen(!open);
-        e.stopPropagation();
-    },[open]);
+  const toggleFun = useCallback(
+    (e) => {
+      setOpen(!open);
+      e.stopPropagation();
+    },
+    [open]
+  );
 
-    return [open, toggleFun]
+  return [open, toggleFun];
 }
 
-export default useToggle
+export default useToggle;
