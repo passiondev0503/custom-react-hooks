@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react'
-
+import { useEffect, useState } from "react";
 
 /**
  * @function useSecondsTimer
@@ -9,32 +8,30 @@ import React, { useState, useEffect } from 'react'
  * @author Sarat Chandra Ejjapureddi
  */
 export default function useSecondsTimer(defaultClock = 0) {
-    const [time, setTime] = useState(defaultClock);
-    const [playing, setPlaying] = useState(true);
+  const [time, setTime] = useState(defaultClock);
+  const [playing, setPlaying] = useState(true);
 
-    const tick = (e) => {
-        e && e.preventDefault()
-        if (time > 0 && playing) {
-            setTime(time - 1)
-        }
+  const tick = (e) => {
+    e && e.preventDefault();
+    if (time > 0 && playing) {
+      setTime(time - 1);
     }
+  };
 
-    const handleReset = (e) => {
-        e && e.preventDefault()
-        setTime(defaultClock)
-    }
+  const handleReset = (e) => {
+    e && e.preventDefault();
+    setTime(defaultClock);
+  };
 
-    const togglePlayPause = (e) => {
-        e && e.preventDefault()
-        setPlaying(!playing)
-    }
+  const togglePlayPause = (e) => {
+    e && e.preventDefault();
+    setPlaying(!playing);
+  };
 
-    useEffect(() => {
-        let timerId = setInterval(tick, 1000);
-        return () => clearInterval(timerId);
-    }, [time, playing])
+  useEffect(() => {
+    let timerId = setInterval(tick, 1000);
+    return () => clearInterval(timerId);
+  }, [time, playing]);
 
-
-    return [time, playing, togglePlayPause, handleReset]
+  return [time, playing, togglePlayPause, handleReset];
 }
-
