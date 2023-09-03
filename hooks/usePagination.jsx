@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-
+import { useState } from "react";
 
 /**
  * @function usePagination
@@ -7,27 +6,27 @@ import React, { useState } from 'react'
  * @returns {Array:Function} : [page, increment, decrement, setPage]
  * @author Sarat Chandra Ejjapureddi
  */
-function usePagination(defaultValue=1) {
-    const [page, setPage] = React.useState(defaultValue);
+function usePagination(defaultValue = 1) {
+  const [page, setPage] = useState(defaultValue);
 
-    const onToNextPage = () => {
-        setPage(page+1);
-    };
+  const onToNextPage = () => {
+    setPage(page + 1);
+  };
 
-    const onToPreviousPage = () => {
-        setPage(page-1);
-    };
+  const onToPreviousPage = () => {
+    setPage(page - 1);
+  };
 
-    const handlePage = (e,value) => {
-        e.preventDefault()
-        setPage(value);
-    };
-    
-    const resetPage = () => {
-        setPage(defaultValue);
-    }
+  const handlePage = (e, value) => {
+    e.preventDefault();
+    setPage(value);
+  };
 
-    return [page, handlePage, resetPage, onToNextPage, onToPreviousPage, setPage]
+  const resetPage = () => {
+    setPage(defaultValue);
+  };
+
+  return [page, handlePage, resetPage, onToNextPage, onToPreviousPage, setPage];
 }
 
-export default usePagination
+export default usePagination;
