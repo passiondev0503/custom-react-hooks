@@ -53,4 +53,6 @@ Custom hooks in React.js that are handy in daily day to day code
 
 ##
 
-[![GitHub](https://img.shields.io/github/followers/nivethjunnithan.svg?label=@nivethjunnithan&style=social)](https://github.com/nivethjunnithan/)
+  <a href="https://nivethjunnithan.github.io/" target="_blank">
+  <img align="center" src="https://img.shields.io/badge/nivethjunnithan-181717?style=flat-square&logo=github" alt="Portfolio" style="vertical-align: middle; font-size: larger;"/>
+  </a>
