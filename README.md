@@ -6,7 +6,7 @@ Custom hooks in React.js that are handy in daily day to day code
 
 #### Custom Hooks
 
-- [useCounter](https://github.com/![Uploading image.png…]()/custom-react-hooks/blob/master/hooks/useCounter.jsx) - React Hook to handle counter, increment and decrement
+- [useCounter](https://github.com/passiondev0503/custom-react-hooks/blob/master/hooks/useCounter.jsx) - React Hook to handle counter, increment and decrement
 - [useDialog](https://github.com/passiondev0503/custom-react-hooks/blob/master/hooks/useDialog.jsx) - React Hook to handle open and close dialogs
 - [useFetch](https://github.com/passiondev0503/custom-react-hooks/blob/master/hooks/useFetch.jsx) - React Hook to call apis on load with Fetch
 - [usePrevious](https://github.com/passiondev0503/custom-react-hooks/blob/master/hooks/usePrevious.jsx) - React Hook to use previos state and props
